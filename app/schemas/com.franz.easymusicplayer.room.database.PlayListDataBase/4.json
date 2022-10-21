@@ -1,0 +1,90 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 4,
+    "identityHash": "76492ef4d000ba99e242248beb7e7377",
+    "entities": [
+      {
+        "tableName": "PlayList",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`mainId` INTEGER NOT NULL, `SongName` TEXT, `SongId` INTEGER, `SingerName` TEXT, `SingerId` INTEGER, `AlbumCover` TEXT, `SongUrl` TEXT, PRIMARY KEY(`mainId`))",
+        "fields": [
+          {
+            "fieldPath": "mainId",
+            "columnName": "mainId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "SongName",
+            "columnName": "SongName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "SongId",
+            "columnName": "SongId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "SingerName",
+            "columnName": "SingerName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "SingerId",
+            "columnName": "SingerId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "AlbumCover",
+            "columnName": "AlbumCover",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "SongUrl",
+            "columnName": "SongUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "mainId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "HistorySearch",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`key` TEXT NOT NULL, PRIMARY KEY(`key`))",
+        "fields": [
+          {
+            "fieldPath": "key",
+            "columnName": "key",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "key"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '76492ef4d000ba99e242248beb7e7377')"
+    ]
+  }
+}

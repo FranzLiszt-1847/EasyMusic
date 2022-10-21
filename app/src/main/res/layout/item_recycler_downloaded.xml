@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="15dp">
+
+    <TextView
+        android:id="@+id/itemDownloadDelete"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="删除"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/shape_red"
+        android:gravity="center"
+        android:padding="10dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/shape_white"
+        android:id="@+id/itemDownloadLayout">
+
+    <TextView
+        android:id="@+id/itemDownloadName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="歌名"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/itemDownloadMv"
+        android:layout_marginLeft="10dp"
+        android:gravity="left"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/itemDownloadQuality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SQ"
+        android:textSize="10sp"
+        android:textColor="@color/color_system_select"
+        android:background="@drawable/shape_stroke_red"
+        app:layout_constraintTop_toBottomOf="@id/itemDownloadName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="left"/>
+
+    <TextView
+        android:id="@+id/itemDownloadSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MB"
+        android:textSize="10sp"
+        android:textColor="@color/color_mine_text"
+        app:layout_constraintTop_toBottomOf="@id/itemDownloadName"
+        app:layout_constraintLeft_toRightOf="@id/itemDownloadQuality"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="5dp"
+        android:gravity="left"/>
+
+    <TextView
+        android:id="@+id/itemDownloadSinger"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="歌手"
+        android:textSize="10sp"
+        android:textColor="@color/color_mine_text"
+        app:layout_constraintTop_toBottomOf="@id/itemDownloadName"
+        app:layout_constraintLeft_toRightOf="@id/itemDownloadSize"
+        app:layout_constraintRight_toLeftOf="@id/itemDownloadMv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="5dp"
+        android:gravity="left"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+
+    <ImageView
+        android:id="@+id/itemDownloadMv"
+        android:layout_width="48dp"
+        android:layout_height="24dp"
+        android:src="@drawable/icon_mv"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="@id/itemDownloadName"
+        app:layout_constraintBottom_toBottomOf="@id/itemDownloadQuality"
+        app:layout_constraintRight_toLeftOf="@id/itemDownloadInfo"
+        />
+
+    <ImageView
+        android:id="@+id/itemDownloadInfo"
+        android:layout_width="48dp"
+        android:layout_height="24dp"
+        android:src="@drawable/icon_more_gray"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="@id/itemDownloadName"
+        app:layout_constraintBottom_toBottomOf="@id/itemDownloadQuality"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

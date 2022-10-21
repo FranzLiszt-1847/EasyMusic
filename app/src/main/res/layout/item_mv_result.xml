@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="20dp"
+    android:id="@+id/mvResultLayout">
+    <ImageView
+        android:id="@+id/mvResultImg"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_default_songs"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/mvResultName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="名称"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/mvResultImg"
+        app:layout_constraintTop_toTopOf="@id/mvResultImg"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/mvResultSinger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="作者"
+        android:textColor="@color/color_system_default"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/mvResultCount"
+        app:layout_constraintLeft_toRightOf="@id/mvResultImg" />
+
+    <TextView
+        android:id="@+id/mvResultCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="播放量"
+        android:textColor="@color/color_system_default"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/mvResultImg" />
+
+    <TextView
+        android:id="@+id/mvResultDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="视频时长"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/mvResultCount"
+        android:layout_marginRight="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

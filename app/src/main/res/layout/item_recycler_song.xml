@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:id="@+id/songDataLayout">
+
+    <ImageView
+        android:id="@+id/itemSongsSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:scaleType="center"
+        android:src="@drawable/icon_select_not"
+        app:layout_constraintTop_toTopOf="@id/itemOrderNum"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/itemOrderNum"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="1"
+        android:textSize="16sp"
+        android:textColor="@color/color_mine_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/itemSongsSelect"
+        android:gravity="center"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/itemSongName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="歌名"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/itemOrderNum"
+        app:layout_constraintLeft_toRightOf="@id/itemOrderNum"
+        app:layout_constraintRight_toLeftOf="@id/itemSongDownload"
+        android:gravity="left"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/itemSingerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="歌手"
+        android:textSize="12sp"
+        android:textColor="@color/color_system_default"
+        app:layout_constraintTop_toBottomOf="@id/itemSongName"
+        app:layout_constraintBottom_toBottomOf="@id/itemOrderNum"
+        app:layout_constraintLeft_toRightOf="@id/itemOrderNum"
+        app:layout_constraintRight_toLeftOf="@id/itemSongDownload"
+        android:layout_marginLeft="10dp"
+        android:gravity="left"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <ImageView
+        android:id="@+id/itemSongDownload"
+        android:layout_width="48dp"
+        android:layout_height="24dp"
+        android:src="@drawable/icon_download"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="@id/itemOrderNum"
+        app:layout_constraintBottom_toBottomOf="@id/itemOrderNum"
+        app:layout_constraintRight_toLeftOf="@id/itemSongMv"
+
+        />
+
+    <ImageView
+        android:id="@+id/itemSongMv"
+        android:layout_width="48dp"
+        android:layout_height="24dp"
+        android:src="@drawable/icon_mv"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="@id/itemOrderNum"
+        app:layout_constraintBottom_toBottomOf="@id/itemOrderNum"
+        app:layout_constraintRight_toLeftOf="@id/itemSongInfo"
+        />
+
+    <ImageView
+        android:id="@+id/itemSongInfo"
+        android:layout_width="48dp"
+        android:layout_height="24dp"
+        android:src="@drawable/icon_more_gray"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="@id/itemOrderNum"
+        app:layout_constraintBottom_toBottomOf="@id/itemOrderNum"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

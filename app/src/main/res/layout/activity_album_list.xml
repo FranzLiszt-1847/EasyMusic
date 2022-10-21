@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/coverLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/albumBigCover"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="35dp">
+
+            <include
+                android:id="@+id/titleBarWhite"
+                layout="@layout/title_bar_white" />
+
+            <ImageView
+                android:id="@+id/albumSmallCover"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleBarWhite"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:id="@+id/albumName"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toRightOf="@id/albumSmallCover"
+                app:layout_constraintTop_toTopOf="@id/albumSmallCover" />
+
+            <TextView
+                android:id="@+id/albumAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/albumSmallCover"
+                app:layout_constraintTop_toBottomOf="@id/albumName" />
+
+            <TextView
+                android:id="@+id/albumNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/color_system_bg"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toRightOf="@id/albumSmallCover"
+                app:layout_constraintBottom_toTopOf="@id/albumTime" />
+
+            <TextView
+                android:id="@+id/albumTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/color_system_bg"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toRightOf="@id/albumSmallCover"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/playAllImg"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/icon_mine_recently"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/coverLayout" />
+
+    <TextView
+        android:id="@+id/playAllText"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:text="播放全部"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toRightOf="@id/playAllImg"
+        app:layout_constraintTop_toTopOf="@id/playAllImg" />
+
+    <ImageView
+        android:id="@+id/songSelect"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/icon_select"
+        android:visibility="invisible"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/playAllImg" />
+
+    <ImageView
+        android:id="@+id/songDownload"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/icon_download_red"
+        app:layout_constraintRight_toLeftOf="@+id/songSelect"
+        app:layout_constraintTop_toTopOf="@id/playAllImg"
+        android:visibility="invisible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/albumListRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playAllImg"
+        app:layout_constraintVertical_weight="1" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:indicatorName="LineScalePulseOutIndicator"
+        app:indicatorColor="@color/color_system_select"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

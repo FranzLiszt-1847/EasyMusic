@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="center_horizontal"
+        android:width="20dp"
+        android:height="5dp">
+    <!-- 若不设置 gravity 则默认是居左显示，需要设置为水平居中显示 -->
+    <shape>
+        <corners android:radius="2dp" />
+    </shape>
+</item>
+    </layer-list>
+

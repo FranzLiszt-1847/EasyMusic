@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.mineFragment.MineFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_system_bg">
+
+        <ImageView
+            android:id="@+id/openSideNavi"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_list"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/searchFunc"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_search"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/loginLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/shape_radius_white"
+            android:padding="30dp"
+            app:layout_constraintTop_toBottomOf="@id/openSideNavi">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="立即登录"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/icon_default_user_img"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/funcLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_radius_white"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/loginLayout">
+
+            <ImageView
+                android:id="@+id/mineRecently"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_mine_recently"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/mineDownload"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/mineDownload"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_mine_download"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@id/mineRecently"
+                app:layout_constraintRight_toLeftOf="@id/minePlayList"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/minePlayList"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_playlist"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@id/mineDownload"
+                app:layout_constraintRight_toLeftOf="@id/mineShopping"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/mineShopping"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_mine_shopping"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@id/minePlayList"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textRecently"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="最近播放"
+                android:textColor="@color/color_mine_text"
+                android:textSize="12sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/mineRecently"
+                app:layout_constraintRight_toRightOf="@id/mineRecently"
+                app:layout_constraintTop_toBottomOf="@id/mineRecently" />
+
+            <TextView
+                android:id="@+id/textDownload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="本地下载"
+                android:textColor="@color/color_mine_text"
+                android:textSize="12sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/mineDownload"
+                app:layout_constraintRight_toRightOf="@id/mineDownload"
+                app:layout_constraintTop_toBottomOf="@id/mineDownload" />
+
+            <TextView
+                android:id="@+id/textPlayList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="播放列表"
+                android:textColor="@color/color_mine_text"
+                android:textSize="12sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/minePlayList"
+                app:layout_constraintRight_toRightOf="@id/minePlayList"
+                app:layout_constraintTop_toBottomOf="@id/minePlayList" />
+
+            <TextView
+                android:id="@+id/textShopping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="购物商场"
+                android:textColor="@color/color_mine_text"
+                android:textSize="12sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/mineShopping"
+                app:layout_constraintRight_toRightOf="@id/mineShopping"
+                app:layout_constraintTop_toBottomOf="@id/mineShopping" />
+
+            <ImageView
+                android:id="@+id/mineFriend"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_mine_friend"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/textRecently"
+                app:layout_constraintRight_toRightOf="@id/textRecently"
+                app:layout_constraintTop_toBottomOf="@id/textRecently" />
+
+            <ImageView
+                android:id="@+id/mineFavorite"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_mine_favorite"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/textDownload"
+                app:layout_constraintRight_toRightOf="@id/textDownload"
+                app:layout_constraintTop_toBottomOf="@id/textDownload" />
+
+            <ImageView
+                android:id="@+id/mineBlog"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_mine_blog"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/textPlayList"
+                app:layout_constraintRight_toRightOf="@id/textPlayList"
+                app:layout_constraintTop_toBottomOf="@id/textPlayList" />
+
+            <ImageView
+                android:id="@+id/minePiano"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_mine_piano"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/textShopping"
+                app:layout_constraintRight_toRightOf="@id/textShopping"
+                app:layout_constraintTop_toBottomOf="@id/textShopping" />
+
+            <TextView
+                android:id="@+id/textFriend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="我的好友"
+                android:textColor="@color/color_mine_text"
+                android:textSize="12sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/mineFriend"
+                app:layout_constraintRight_toRightOf="@id/mineFriend"
+                app:layout_constraintTop_toBottomOf="@id/mineFriend" />
+
+            <TextView
+                android:id="@+id/textFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="我的收藏"
+                android:textColor="@color/color_mine_text"
+                android:textSize="12sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/mineFavorite"
+                app:layout_constraintRight_toRightOf="@id/mineFavorite"
+                app:layout_constraintTop_toBottomOf="@id/mineFavorite" />
+
+            <TextView
+                android:id="@+id/textBlog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="我的播客"
+                android:textColor="@color/color_mine_text"
+                android:textSize="12sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/mineBlog"
+                app:layout_constraintRight_toRightOf="@id/mineBlog"
+                app:layout_constraintTop_toBottomOf="@id/mineBlog" />
+
+            <TextView
+                android:id="@+id/textPaino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="古典专区"
+                android:textColor="@color/color_mine_text"
+                android:textSize="12sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/minePiano"
+                app:layout_constraintRight_toRightOf="@id/minePiano"
+                app:layout_constraintTop_toBottomOf="@id/minePiano" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/likeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_radius_white"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/funcLayout">
+
+            <ImageView
+                android:id="@+id/likeSons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_my_like"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="我喜欢的音乐"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/likeSons"
+                app:layout_constraintTop_toTopOf="@id/likeSons" />
+
+            <TextView
+                android:id="@+id/likeSonsNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="0首"
+                android:textColor="@color/color_system_default"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/likeSons" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_stroke"
+                android:drawableLeft="@drawable/icon_my_love"
+                android:padding="5dp"
+                android:text="心动模式"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/mineTabTitle"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/likeLayout"
+            app:tabIndicator="@drawable/layer_list_indicator"
+            app:tabIndicatorColor="@color/color_system_select"
+            app:tabIndicatorFullWidth="true"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextAppearance="@style/TabLayoutTextSize"
+            app:tabTextColor="@color/color_system_default" />
+
+        <com.franz.easymusicplayer.widgets.AutoHeightViewPager
+            android:id="@+id/mineViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/mineTabTitle"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

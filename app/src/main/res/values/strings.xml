@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">EasyMusicPlayer</string>
+
+    <string name="default_songs_name">暂无正在播放歌曲</string>
+    <string name="default_singer_name">无名氏</string>
+    <string name="default_signin_text">立即登录</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navi_title_mine">我的</string>
+    <string name="navi_title_blog">播客</string>
+    <string name="navi_title_finding">发现</string>
+    <string name="navi_title_community">云村</string>
+    <string name="login_privacy_policy">登录代表您已经同意<font color='#EB4D45'>《EasyMusic隐私政策》</font></string>
+    <string name="login_user_hint">请输入手机号码</string>
+    <string name="login_password_hint">请输入密码</string>
+    <string name="login_identify_code_hint">请输入验证码</string>
+    <string name="login_get_identify_code_hint">获取验证码</string>
+    <string name="claim_text">此项目仅用于学习，现阶段仍存在许多不足之处…</string>
+    <string name="title_activity_mlog">MLogActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="download_content">已选中 %1$d 项音乐，可能部分音乐不可下载(原因包括:需要开通会员权限或者该项已经存在下载队列之中)，是否继续进行下载?</string>
+</resources>

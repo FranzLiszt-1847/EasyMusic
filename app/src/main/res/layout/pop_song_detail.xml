@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_detail_pop"
+    android:padding="20dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/songDetailCover"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/icon_default_songs"/>
+    <TextView
+        android:id="@+id/songDetailSingerTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌手:"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/songDetailCover"
+        app:layout_constraintLeft_toLeftOf="@id/songDetailCover"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/songDetailSinger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌手"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/songDetailCover"
+        app:layout_constraintLeft_toRightOf="@id/songDetailSingerTips"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/songDetailSongTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌曲:"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/songDetailSingerTips"
+        app:layout_constraintLeft_toLeftOf="@id/songDetailCover"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/songDetailSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌曲"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/songDetailSinger"
+        app:layout_constraintLeft_toRightOf="@id/songDetailSongTips"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/songDetailAlbumTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="专辑:"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/songDetailSongTips"
+        app:layout_constraintLeft_toLeftOf="@id/songDetailCover"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/songDetailAlbum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="专辑"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/songDetailSong"
+        app:layout_constraintLeft_toRightOf="@id/songDetailAlbumTips"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/songDetailTypeTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="类型:"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/songDetailAlbumTips"
+        app:layout_constraintLeft_toLeftOf="@id/songDetailCover"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/songDetailType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="免费"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/songDetailAlbum"
+        app:layout_constraintLeft_toRightOf="@id/songDetailTypeTips"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/songDetailTimeTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="时间:"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/songDetailTypeTips"
+        app:layout_constraintLeft_toLeftOf="@id/songDetailCover"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/songDetailTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="时间"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/songDetailType"
+        app:layout_constraintLeft_toRightOf="@id/songDetailTimeTips"
+        android:layout_marginTop="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="380dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="#00000000">
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:background="@drawable/icon_volume_bg"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_gravity="center"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_brightness"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="30dp"/>
+        <ProgressBar
+            android:id="@+id/video_brightness_progressBar"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="3dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:max="100"
+            android:progressDrawable="@drawable/layer_list_bar"
+            android:layout_gravity="center"
+            android:layout_marginRight="30dp"/>
+    </LinearLayout>
+</LinearLayout>

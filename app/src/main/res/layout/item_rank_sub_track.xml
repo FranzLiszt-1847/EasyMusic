@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/shape_radius_white"
+    android:padding="10dp"
+    android:id="@+id/officialRankLayout"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:id="@+id/officialRankTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="排行榜名称"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/officialRankTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="更新时间"
+        android:textColor="@color/color_system_default"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView
+        android:id="@+id/officialCover"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/icon_default_songs"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/officialRankTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/oneOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="@id/officialCover"
+        app:layout_constraintLeft_toRightOf="@id/officialCover"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/oneSongName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌曲名称"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="@id/officialCover"
+        app:layout_constraintLeft_toRightOf="@id/oneOrder"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/oneSinger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌手名称"
+        android:textColor="@color/color_system_default"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="@id/officialCover"
+        app:layout_constraintLeft_toRightOf="@id/oneSongName"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/twoOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/oneOrder"
+        app:layout_constraintBottom_toTopOf="@id/threeOrder"
+        app:layout_constraintLeft_toRightOf="@id/officialCover"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/twoSongName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌曲名称"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/oneSongName"
+        app:layout_constraintBottom_toTopOf="@id/threeSongName"
+        app:layout_constraintLeft_toRightOf="@id/oneOrder"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/twoSinger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌手名称"
+        android:textColor="@color/color_system_default"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/oneSinger"
+        app:layout_constraintBottom_toTopOf="@id/threeSinger"
+        app:layout_constraintLeft_toRightOf="@id/twoSongName"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/threeOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/officialCover"
+        app:layout_constraintLeft_toRightOf="@id/officialCover"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/threeSongName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌曲名称"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/officialCover"
+        app:layout_constraintLeft_toRightOf="@id/oneOrder"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/threeSinger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌手名称"
+        android:textColor="@color/color_system_default"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/officialCover"
+        app:layout_constraintLeft_toRightOf="@id/threeSongName"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginLeft="10dp"/>
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>

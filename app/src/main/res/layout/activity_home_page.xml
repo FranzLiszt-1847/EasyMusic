@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.sothree.slidinguppanel.SlidingUpPanelLayout
+            android:id="@+id/slidUpLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_system_bg"
+            android:gravity="bottom"
+            app:umanoOverlay="false"
+            app:umanoClipPanel="false"
+            app:umanoPanelHeight="110dp"
+            app:umanoScrollableView="@id/musicLayout"
+            tools:context=".ui.HomePageActivity">
+
+            <FrameLayout
+                android:id="@+id/contentFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <LinearLayout
+                android:id="@+id/musicLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:elevation="8.5dp"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="true">
+
+                <include
+                    android:id="@+id/musicPlayer"
+                    layout="@layout/music_play_layout"
+                    android:clickable="true"
+                    android:focusable="false"/>
+
+                <include
+                    android:id="@+id/musicDetail"
+                    layout="@layout/play_detail_layout"
+                    android:clickable="true"
+                    android:focusable="false"/>
+            </LinearLayout>
+        </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            app:itemTextColor="@color/selector_bottom_navi_color"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_navi_content" />
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/sideNavi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/side_navi_header"
+        app:menu="@menu/side_navi_content" />
+</androidx.drawerlayout.widget.DrawerLayout>

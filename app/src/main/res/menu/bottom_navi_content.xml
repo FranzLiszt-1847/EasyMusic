@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bottom_navi_finding"
+        android:icon="@drawable/selector_bottom_finding"
+        android:title="发现"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/bottom_navi_search"
+        android:icon="@drawable/selector_bottom_search"
+        android:title="搜索"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/bottom_navi_mine"
+        android:icon="@drawable/selector_bottom_mine"
+        android:title="我的"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/bottom_navi_community"
+        android:icon="@drawable/selector_bottom_community"
+        android:title="云村"
+        app:showAsAction="always" />
+
+</menu>

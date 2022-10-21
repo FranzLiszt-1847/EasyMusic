@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/musicGroup"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/messageCenter"
+            android:title="消息中心" />
+        <item
+            android:id="@+id/yunCenter"
+            android:title="云贝中心" />
+
+        <item android:title="音乐服务">
+            <menu>
+                <item
+                    android:id="@+id/yunTicket"
+                    android:title="云村有票" />
+                <item
+                    android:id="@+id/beatArea"
+                    android:title="Beat专区" />
+                <item
+                    android:id="@+id/sackRing"
+                    android:title="口袋彩铃" />
+                <item
+                    android:id="@+id/gameArea"
+                    android:title="游戏专区" />
+            </menu>
+        </item>
+        <item android:title="其他">
+            <menu>
+                <item
+                    android:id="@+id/sideSetting"
+                    android:title="设置"/>
+                <item
+                    android:id="@+id/bgMode"
+                    android:title="深色模式"
+                    android:actionLayout="@layout/navi_switch"
+                    app:showAsAction="ifRoom"
+                   />
+                <item
+                    android:id="@+id/musicBlackList"
+                    android:title="音乐黑名单" />
+                <item
+                    android:id="@+id/shareMusic"
+                    android:title="分享EasyMusic" />
+                <item
+                    android:id="@+id/aboutMusic"
+                    android:title="关于" />
+            </menu>
+        </item>
+    </group>
+</menu>

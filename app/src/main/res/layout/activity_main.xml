@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"/>
+
+    <ImageView
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:src="@drawable/easy_music_logo"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_login_tablayout_bg"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/TotalTitle"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:tabSelectedTextColor="@color/color_system_select"
+            app:tabTextColor="#A59C9C"
+            app:tabMode="fixed"
+            app:tabBackground="@drawable/selector_tablayout_indicator"
+            app:tabIndicatorHeight="0dp"
+            app:tabGravity="center"
+            app:tabIndicatorFullWidth="false"
+            />
+    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/ViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"/>
+
+</LinearLayout>
