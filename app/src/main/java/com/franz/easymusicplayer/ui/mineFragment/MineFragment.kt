@@ -94,6 +94,7 @@ class MineFragment : LazyFragment(),View.OnClickListener{
     /**
      * 初始化创建歌单和收藏歌单tab和适配器*/
     private fun initTabLayout(){
+
         val createListView: View = LayoutInflater.from(activity).inflate(R.layout.item_mine_create_songlist, null)
         val favoriteListView: View = LayoutInflater.from(activity).inflate(R.layout.item_mine_favorite_songlist, null)
 
@@ -123,18 +124,18 @@ class MineFragment : LazyFragment(),View.OnClickListener{
         binding.mineTabTitle.setupWithViewPager(binding.mineViewPager)
         binding.mineViewPager.adapter = adapter
 
-        binding.mineViewPager.offscreenPageLimit = adapter.count
+        //binding.mineViewPager.offscreenPageLimit = adapter.count - 1
 
         val createManager: LinearLayoutManager = LinearLayoutManager(activity)
-        createManager.isSmoothScrollbarEnabled = true
-        createManager.isAutoMeasureEnabled = true
+//        createManager.isSmoothScrollbarEnabled = true
+//        createManager.isAutoMeasureEnabled = true
         createSongBinding.createRecycler.layoutManager = createManager
         createAdapter = SongListAdapter(createBeanList)
         createSongBinding.createRecycler.adapter = createAdapter
 
         val favoriteManager: LinearLayoutManager = LinearLayoutManager(activity)
-        favoriteManager.isSmoothScrollbarEnabled = true
-        favoriteManager.isAutoMeasureEnabled = true
+//        favoriteManager.isSmoothScrollbarEnabled = true
+//        favoriteManager.isAutoMeasureEnabled = true
         favoriteSongBinding.favoriteRecycler.layoutManager = favoriteManager
         favoriteAdapter = SongListAdapter(favoriteBeanList)
         favoriteSongBinding.favoriteRecycler.adapter = favoriteAdapter
@@ -163,21 +164,24 @@ class MineFragment : LazyFragment(),View.OnClickListener{
                 startActivity(intent)
             }
         })
-        binding.mineViewPager.initIndexList(adapter.count)
+
+
+        binding.mineViewPager.initIndexList(2)
         binding.mineViewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener{
-           override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
 
-           }
+            }
 
-           override fun onPageSelected(position: Int) {
-              binding.mineViewPager.updateHeight(position)
-           }
+            override fun onPageSelected(position: Int) {
+                binding.mineViewPager.updateHeight(position)
+            }
 
-           override fun onPageScrollStateChanged(state: Int) {
+            override fun onPageScrollStateChanged(state: Int) {
 
-           }
+            }
 
-       })
+        })
+
     }
 
     /**

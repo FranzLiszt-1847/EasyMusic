@@ -347,5 +347,17 @@
             android:layout_marginTop="20dp"
             app:layout_constraintTop_toBottomOf="@id/mineTabTitle"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+<!--        <androidx.viewpager.widget.ViewPager-->
+<!--            android:id="@+id/mineViewPager"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/mineTabTitle"-->
+<!--            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toBottomOf="@id/mineViewPager"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

@@ -24,11 +24,18 @@
         android:scaleType="fitCenter"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
-    <androidx.recyclerview.widget.RecyclerView
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/createRecycler"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintVertical_weight="1"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/createListNum"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
+    <com.franz.easymusicplayer.adapter.NoSlideRecyclerView
         android:id="@+id/createRecycler"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintVertical_weight="1"
-        app:layout_constraintTop_toBottomOf="@id/createListNum"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/createListNum" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -42,11 +42,11 @@ public class AutoHeightViewPager extends ViewPager {
         }
     }
 
-    public AutoHeightViewPager(@NonNull Context context) {
+    public AutoHeightViewPager( Context context) {
         super(context);
     }
 
-    public AutoHeightViewPager(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public AutoHeightViewPager( Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
@@ -56,11 +56,13 @@ public class AutoHeightViewPager extends ViewPager {
         if (indexList.size() > 0) {
             if (indexList.get(mPosition)) {
                 height = mChildrenViews.get(mPosition);
+                Log.d("ViewHeight","if-高度="+height+"-"+mPosition);
             } else {
                 for (int i = 0; i < getChildCount(); i++) {
                     View child = getChildAt(i);
                     child.measure(widthMeasureSpec, MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED));
                     int h = child.getMeasuredHeight();
+                    Log.d("ViewHeight",i+"-高度="+height);
                     if (h > height) {
                         height = h;
                     }
@@ -85,7 +87,9 @@ public class AutoHeightViewPager extends ViewPager {
                 int height = 0;
                 if (mChildrenViews.get(current) != null) {
                     height = mChildrenViews.get(current);
+                    Log.d("ViewHeight","update ture 高度="+height);
                 }
+                Log.d("ViewHeight","update false 高度");
                 ConstraintLayout.LayoutParams layoutParams = (ConstraintLayout.LayoutParams) getLayoutParams();
                 if (layoutParams == null) {
                     layoutParams = new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.MATCH_PARENT, height);

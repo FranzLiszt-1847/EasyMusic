@@ -24,7 +24,10 @@
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintLeft_toRightOf="@id/itemSongListImg"
-            app:layout_constraintTop_toTopOf="@id/itemSongListImg" />
+            app:layout_constraintTop_toTopOf="@id/itemSongListImg"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:maxEms="15"/>
 
         <TextView
             android:id="@+id/itemSongListNum"
