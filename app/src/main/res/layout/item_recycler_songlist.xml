@@ -27,7 +27,7 @@
             app:layout_constraintTop_toTopOf="@id/itemSongListImg"
             android:maxLines="1"
             android:ellipsize="end"
-            android:maxEms="15"/>
+            android:maxEms="12"/>
 
         <TextView
             android:id="@+id/itemSongListNum"

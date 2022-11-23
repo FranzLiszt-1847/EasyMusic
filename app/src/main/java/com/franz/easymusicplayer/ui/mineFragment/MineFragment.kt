@@ -124,18 +124,18 @@ class MineFragment : LazyFragment(),View.OnClickListener{
         binding.mineTabTitle.setupWithViewPager(binding.mineViewPager)
         binding.mineViewPager.adapter = adapter
 
-        //binding.mineViewPager.offscreenPageLimit = adapter.count - 1
+        binding.mineViewPager.offscreenPageLimit = adapter.count
 
         val createManager: LinearLayoutManager = LinearLayoutManager(activity)
-//        createManager.isSmoothScrollbarEnabled = true
-//        createManager.isAutoMeasureEnabled = true
+        createManager.isSmoothScrollbarEnabled = true
+        createManager.isAutoMeasureEnabled = true
         createSongBinding.createRecycler.layoutManager = createManager
         createAdapter = SongListAdapter(createBeanList)
         createSongBinding.createRecycler.adapter = createAdapter
 
         val favoriteManager: LinearLayoutManager = LinearLayoutManager(activity)
-//        favoriteManager.isSmoothScrollbarEnabled = true
-//        favoriteManager.isAutoMeasureEnabled = true
+        favoriteManager.isSmoothScrollbarEnabled = true
+        favoriteManager.isAutoMeasureEnabled = true
         favoriteSongBinding.favoriteRecycler.layoutManager = favoriteManager
         favoriteAdapter = SongListAdapter(favoriteBeanList)
         favoriteSongBinding.favoriteRecycler.adapter = favoriteAdapter
@@ -166,7 +166,7 @@ class MineFragment : LazyFragment(),View.OnClickListener{
         })
 
 
-        binding.mineViewPager.initIndexList(2)
+        binding.mineViewPager.initIndexList(adapter.count)
         binding.mineViewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener{
             override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
 

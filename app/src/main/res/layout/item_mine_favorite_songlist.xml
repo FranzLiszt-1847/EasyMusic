@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/shape_radius_white"
     android:padding="10dp">
 
     <TextView
@@ -24,16 +23,17 @@
         android:scaleType="fitCenter"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
-<!--    <androidx.recyclerview.widget.RecyclerView-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favoriteRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/favoriteListNum"
+        android:background="@drawable/shape_radius_white"
+        android:padding="10dp"/>
+<!--    <com.franz.easymusicplayer.widgets.NoSlideRecyclerView-->
 <!--        android:id="@+id/favoriteRecycler"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="0dp"-->
 <!--        app:layout_constraintVertical_weight="1"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/favoriteListNum"/>-->
-    <com.franz.easymusicplayer.adapter.NoSlideRecyclerView
-        android:id="@+id/favoriteRecycler"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintVertical_weight="1"
-        app:layout_constraintTop_toBottomOf="@id/favoriteListNum" />
+<!--        app:layout_constraintTop_toBottomOf="@id/favoriteListNum" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>
